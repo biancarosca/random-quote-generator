@@ -1,0 +1,82 @@
+@import 'variables';
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $background-color;
+    font-family: $font-stack;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+}
+
+.app-container{
+    width: 40vw;
+    background-color: $primary-color;
+    border-radius: 20px;
+    padding: 2rem;
+
+    p{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .author{
+        width: 100%;
+        display:flex;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    .button-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    button{
+        text-decoration: none;
+        padding: 5px 15px;
+        background-color: $primary-lighter;
+        color: white;
+        border:none;
+        border-radius: 25px;
+        font-family: $font-stack;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+            background-color: white;
+            color: $primary-lighter;
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 955px) {
+    .app-container{
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .app-container{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app-container{
+        width: 80vw;
+    }
+}
